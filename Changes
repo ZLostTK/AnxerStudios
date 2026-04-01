@@ -1,0 +1,8 @@
+# Changes
+
+## 2.0.0 (02-04-2026)
+
+### Fixed
+- **Mejora en la organización interna**: Se ajustó la forma en que la aplicación genera sus archivos para que todas sus partes (versión de escritorio, web y servidores) encuentren siempre lo que necesitan para funcionar sin errores.
+- **Sincronización de componentes**: Se actualizó el listado interno de piezas de la aplicación para asegurar que el reproductor de video funcione correctamente y la instalación sea más fluida.
+- **Mejor detección del sistema**: Ahora el programa es más inteligente al buscar sus propios archivos, lo que lo hace más estable tanto si lo usas en tu computadora como si lo instalas en un servidor.
