@@ -1,5 +1,19 @@
 # Changes
 
+## 2.0.2 (02-04-2026)
+
+### Fixed
+- **Codecs de Audio y Video Nativos (Linux)**: El reproductor estallaba cuando intentaba buscar conectores de audio del sistema (gstreamer). Se corrigió empaquetando de forma oficial todas las librerías multimedia directo dentro del `.AppImage`, haciendo la App 100% independiente de lo que tenga instalado el usuario en Linux.
+
+## 2.0.1 (02-04-2026)
+
+### Added
+- **Modo Servidor Invisible (`--server`)**: Ahora puedes iniciar AnxerStudios oculto en el fondo para usarlo desde tu navegador web.
+- **Apagado Rápido (`--stop`)**: Nuevo comando para cerrar de golpe la app y todos sus procesos con una sola instrucción.
+
+### Fixed
+- **Solucionado el Error de Reproducción en Linux**: Reparamos un fallo técnico que cerraba la aplicación de golpe justo cuando ibas a darle play a una película o serie (problema con AppImage y GStreamer).
+
 ## 2.0.0 (02-04-2026)
 
 ### Fixed
