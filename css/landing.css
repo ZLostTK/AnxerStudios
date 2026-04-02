@@ -790,7 +790,7 @@ img {
   position: relative;
 }
 
-.countdown-circle svg {
+.countdown-circle > svg {
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
@@ -1471,6 +1471,60 @@ img {
   padding: 1rem;
   border-radius: 8px;
 }
+
+/* ── Alert Components ───────────────────────────────────────── */
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  display: block;
+  font-weight: 700;
+  font-family: var(--font-display);
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.alert-note {
+  background: rgba(0, 204, 255, 0.05);
+  border-left: 4px solid var(--cyan);
+}
+.alert-note .alert-title { color: var(--cyan); }
+.alert-note .alert-icon { color: var(--cyan); }
+
+.alert-tip {
+  background: rgba(187, 134, 252, 0.05);
+  border-left: 4px solid var(--violet);
+}
+.alert-tip .alert-title { color: var(--violet); }
+.alert-tip .alert-icon { color: var(--violet); }
+
+.alert-caution {
+  background: rgba(255, 0, 255, 0.05);
+  border-left: 4px solid var(--magenta);
+}
+.alert-caution .alert-title { color: var(--magenta); }
+.alert-caution .alert-icon { color: var(--magenta); }
 
 @media (max-width: 992px) {
   .docs-layout {

@@ -37,8 +37,7 @@
           <nav class="header-nav">
             <a href="index.html">Inicio</a>
             <a href="index.html#features">Features</a>
-            <a href="#install">Instalación</a>
-            <a href="#commands">Comandos</a>
+            <a href="index.html#download">Descargar</a>
             <a href="https://github.com/ZLostTK/AnxerStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
           </nav>
 
@@ -55,118 +54,158 @@
 
     <main class="main-content">
       <!-- ═══ Title ═════════════════════════════════════════ -->
-      <section class="docs-hero hero">
+      <section class="docs-hero">
         <div class="container">
           <span class="hero-tag">Guía Oficial</span>
           <h1 class="hero-title">Guía de <span class="gradient-text">Instalación</span></h1>
-          <p class="hero-subtitle">Instala Anxer Studios en tu sistema preferido y comienza a disfrutar del mejor catálogo de streaming.</p>
+          <p class="hero-subtitle">Sigue estas instrucciones para configurar Anxer Studios en cualquier plataforma y optimizar tu experiencia de streaming.</p>
         </div>
       </section>
 
       <div class="container">
         <!-- ═══ Index and Content ════════════════════════════ -->
         <div class="docs-layout">
-          <!-- Sidebar Nav (Optional) -->
+          <!-- Sidebar Nav -->
           <aside class="docs-sidebar">
             <nav class="docs-nav-links">
-              <a href="#windows">Windows (Setup/MSI)</a>
-              <a href="#linux-appimage">Linux (AppImage)</a>
-              <a href="#linux-pkg">Linux (DEB/RPM)</a>
-              <a href="#commands">Modos de Servidor</a>
-              <a href="#troubleshooting">Solución de Problemas</a>
+              <a href="#intro" class="active">Introducción</a>
+              <a href="#windows">Windows (Setup)</a>
+              <a href="#linux-deb">Ubuntu / Debian</a>
+              <a href="#linux-rpm">Fedora (.rpm)</a>
+              <a href="#linux-arch">Arch Linux</a>
+              <a href="#docker">Docker & CasaOS</a>
             </nav>
           </aside>
 
           <!-- Main Doc Content -->
           <article class="docs-article">
             
+            <section id="intro" class="doc-section">
+              <div class="alert alert-note">
+                <div class="alert-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                  </svg>
+                </div>
+                <div class="alert-content">
+                  <span class="alert-title">Nota de Desarrollo</span>
+                  La aplicación está en constante evolución. Si encuentras algún comportamiento inesperado, revisa los Releases en GitHub para obtener la última versión estable.
+                </div>
+              </div>
+
+              <div class="alert alert-caution">
+                <div class="alert-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </div>
+                <div class="alert-content">
+                  <span class="alert-title">Sobre la Publicidad</span>
+                  AnxerStudios <strong>no contiene anuncios invasivos</strong>. Solo incluimos banners laterales en nuestra web oficial para el mantenimiento de los servidores. Si ves banners intrusivos durante la reproducción, estos provienen de los proveedores de contenido externos, no de nuestra aplicación.
+                </div>
+              </div>
+            </section>
+
+            <div class="separator" aria-hidden="true"></div>
+
             <section id="windows" class="doc-section">
-              <h2>Windows <span class="badge">Desktop</span></h2>
-              <p>Recomendado para usuarios de Windows 10 x64 o superior.</p>
+              <h2>Windows <span class="badge">MSI / EXE</span></h2>
+              <p>Ideal para Windows 10/11 x64. Soporta video nativo (HLS) mediante WebView2.</p>
+              
               <div class="step-list">
-                <p>1. Descarga el archivo <code>.exe</code> o <code>.msi</code> desde la <a href="index.html#download">página principal</a>.</p>
-                <p>2. Ejecuta el archivo descargado.</p>
-                <p>3. Si Windows SmartScreen aparece, selecciona "Más información" y después "Ejecutar".</p>
-                <p>4. Abre la app desde el escritorio.</p>
+                <p>1. Descarga <code>AnxerStudios_X.X.X_x64-setup.exe</code> desde GitHub.</p>
+                <p>2. Ejecuta el archivo y sigue el asistente de instalación.</p>
+                <p>3. Busca "AnxerStudios" en el menú de inicio para comenzar.</p>
+              </div>
+
+              <div class="note">
+                <strong>Desinstalación:</strong> Puedes hacerlo desde Configuración → Aplicaciones → Aplicaciones instaladas, buscando "AnxerStudios".
               </div>
             </section>
 
             <div class="separator" aria-hidden="true"></div>
 
-            <section id="linux-appimage" class="doc-section">
-              <h2>Linux <span class="badge">AppImage</span></h2>
-              <p>El formato universal que funciona en casi cualquier distribución sin instalar nada.</p>
+            <section id="linux-deb" class="doc-section">
+              <h2>Ubuntu / Debian <span class="badge">Nativo</span></h2>
+              <p>Utiliza el motor WebKitGTK nativo de tu sistema para máxima compatibilidad.</p>
+              
               <div class="code-block-wrapper">
-                <p>1. Da permisos de ejecución:</p>
+                <p>1. Asegúrate de tener los codecs necesarios:</p>
                 <div class="code-terminal">
-                  <code><span class="token-cmd">chmod</span> <span class="token-flag">+x</span> <span class="token-arg">AnxerStudios_X.X.X_x64.AppImage</span></code>
+                  <code><span class="token-cmd">sudo apt install</span> <span class="token-arg">ubuntu-restricted-extras gstreamer1.0-plugins-bad gstreamer1.0-libav</span></code>
                 </div>
-                <p>2. Ejecuta directamente:</p>
+                <p>2. Instala el paquete descargado:</p>
                 <div class="code-terminal">
-                  <code><span class="token-cmd">./AnxerStudios_X.X.X_x64.AppImage</span></code>
-                </div>
-              </div>
-              <p class="note"><strong>Nota:</strong> Para una mejor experiencia, puedes usar herramientas como <em>AppImageLauncher</em> para integrar la app en tu menú de aplicaciones.</p>
-            </section>
-
-            <div class="separator" aria-hidden="true"></div>
-
-            <section id="linux-pkg" class="doc-section">
-              <h2>Ubuntu/Debian & Fedora</h2>
-              <p>Instala la aplicación de forma nativa en tu sistema.</p>
-              <div class="tabs">
-                <div class="tab">
-                  <strong>Debian / Ubuntu / Kali</strong>
-                  <div class="code-terminal">
-                    <code><span class="token-cmd">sudo</span> <span class="token-arg">dpkg</span> <span class="token-flag">-i</span> <span class="token-arg">AnxerStudios_X.X.X_amd64.deb</span></code>
-                  </div>
-                </div>
-                <div class="tab">
-                  <strong>Fedora / RedHat / RHEL</strong>
-                  <div class="code-terminal">
-                    <code><span class="token-cmd">sudo</span> <span class="token-arg">rpm</span> <span class="token-flag">-i</span> <span class="token-arg">AnxerStudios-X.X.X.x86_64.rpm</span></code>
-                  </div>
+                  <code><span class="token-cmd">sudo dpkg -i</span> <span class="token-arg">AnxerStudios_X.X.X_amd64.deb</span></code>
+                  <code><span class="token-cmd">sudo apt-get install -f</span> <span class="token-comment"># Resuelve dependencias si es necesario</span></code>
                 </div>
               </div>
             </section>
 
             <div class="separator" aria-hidden="true"></div>
 
-            <section id="commands" class="doc-section">
-              <h2>Modos de Lanzamiento <span class="badge badge-magenta">Advanced</span></h2>
-              <p>AnxerStudios incluye funciones avanzadas accesibles mediante terminal (CLI).</p>
+            <section id="linux-rpm" class="doc-section">
+              <h2>Fedora <span class="badge">RPM</span></h2>
+              <div class="code-block-wrapper">
+                <p>Usa DNF para instalar el paquete RPM localmente:</p>
+                <div class="code-terminal">
+                  <code><span class="token-cmd">sudo dnf localinstall</span> <span class="token-arg">AnxerStudios-X.X.X.x86_64.rpm</span></code>
+                </div>
+              </div>
+            </section>
+
+            <div class="separator" aria-hidden="true"></div>
+
+            <section id="linux-arch" class="doc-section">
+              <h2>Arch Linux <span class="badge badge-magenta">Power User</span></h2>
+              <p>Debido a restricciones de librerías en AppImage, recomendamos el uso de <code>debtap</code> para una instalación nativa.</p>
               
               <div class="feature-detail">
-                <h4>Modo Servidor Invisible</h4>
+                <h4>Opción 1: Conversión Nativa (.deb a PKG)</h4>
                 <div class="code-terminal">
-                  <code><span class="token-cmd">anxer-studios</span> <span class="token-flag">--server</span></code>
+                  <code><span class="token-comment"># Instalar debtap desde AUR</span></code>
+                  <code><span class="token-cmd">git clone</span> <span class="token-arg">https://aur.archlinux.org/debtap.git</span></code>
+                  <code><span class="token-cmd">cd</span> <span class="token-arg">debtap</span> && <span class="token-cmd">makepkg -sic</span></code>
+                  <code><span class="token-comment"># Convertir el paquete de Ubuntu</span></code>
+                  <code><span class="token-cmd">debtap -q</span> <span class="token-arg">AnxerStudios_X.X.X_amd64.deb</span></code>
+                  <code><span class="token-cmd">sudo pacman -Udd</span> <span class="token-arg">anxer-studios-X.X.X-1-x86_64.pkg.tar.zst</span></code>
                 </div>
-                <p>Inicia el motor de streaming en segundo plano. Ideal para servidores o navegadores en <code>localhost:3000</code>.</p>
+              </div>
+
+              <div class="alert alert-tip">
+                <div class="alert-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <div class="alert-content">
+                  <span class="alert-title">Tip Pro</span>
+                  Puedes lanzar AnxerStudios desde la terminal como servidor con <code>app --server &</code> y apagarlo con <code>app --stop</code>.
+                </div>
               </div>
 
               <div class="feature-detail">
-                <h4>Apagado Rápido</h4>
+                <h4>Opción 2: Modo Servidor (AppImage)</h4>
+                <p>Usa el motor de Anxer y visualiza el contenido en tu navegador (Firefox/Brave) para soporte completo de codecs.</p>
                 <div class="code-terminal">
-                  <code><span class="token-cmd">anxer-studios</span> <span class="token-flag">--stop</span></code>
+                  <code><span class="token-cmd">./AnxerStudios.AppImage</span> <span class="token-flag">--server</span></code>
+                  <code><span class="token-comment"># Accede a http://localhost:1234</span></code>
                 </div>
-                <p>Cierra la aplicación y todas sus instancias de servidor activas de forma segura.</p>
               </div>
             </section>
 
             <div class="separator" aria-hidden="true"></div>
 
-            <section id="troubleshooting" class="doc-section">
-              <h2>Solución de Problemas</h2>
-              <div class="accordion">
-                <details>
-                  <summary>¿Pantalla en blanco al abrir (Linux)?</summary>
-                  <p>Asegúrate de tener instaladas las librerías de WebKitGTK. En Ubuntu: <code>sudo apt install libwebkit2gtk-4.0-37</code>.</p>
-                </details>
-                <details>
-                  <summary>¿Error al reproducir audio/video?</summary>
-                  <p>Desde la v2.0.2 empaquetamos todos los codecs nativos. Asegúrate de estar usando la última versión (vX.X.X) para tener la mejor compatibilidad.</p>
-                </details>
+            <section id="docker" class="doc-section">
+              <h2>Docker & CasaOS <span class="badge">BETA</span></h2>
+              <p>Despliega AnxerStudios en tu servidor personal, Raspberry Pi o NAS.</p>
+              <div class="code-block-wrapper">
+                <div class="code-terminal" style="max-width: 100%;">
+                  <code><span class="token-comment"># Levantar servidor con Docker Compose</span></code>
+                  <code><span class="token-cmd">docker compose up -d</span></code>
+                </div>
               </div>
+              <p>Disponible para arquitecturas <strong>AMD64 y ARM</strong>. Ideal para ser usado permanentemente bajo <code>http://[HOST_IP]:1234</code>.</p>
             </section>
 
           </article>
@@ -184,7 +223,7 @@
             </svg>
             <span>ANXER STUDIOS</span>
           </div>
-          <p class="footer-copy">© 2026 Anxer Studios. Todos los derechos reservados.</p>
+          <p class="footer-copy">© 2026 Anxer Studios. Guía mantenida por la comunidad.</p>
         </div>
       </div>
     </footer>

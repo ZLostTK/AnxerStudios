@@ -7,13 +7,11 @@
   'use strict';
 
   // ── Constants ──────────────────────────────────────────────
-  const ADS_CONFIG_URL =
-    'https://raw.githubusercontent.com/ZLostTK/Web-Scrapping/main/ads.json';
   const COUNTDOWN_SECONDS = 5;
   const CAROUSEL_INTERVAL = 5000;
   // Update this when you create releases
   const GITHUB_RELEASES_URL =
-    'https://github.com/ZLostTK/Web-Scrapping/releases/latest';
+    'https://github.com/ZLostTK/AnxerStudios/releases/latest';
 
   // ── DOM refs ───────────────────────────────────────────────
   const $ = (sel) => document.querySelector(sel);
@@ -152,65 +150,6 @@
     });
   }
 
-  // ── Dynamic Ads ────────────────────────────────────────────
-  async function loadAds() {
-    const leftSidebar = $('#ad-sidebar-left');
-    const rightSidebar = $('#ad-sidebar-right');
-    if (!leftSidebar && !rightSidebar) return;
-
-    // Try cache first
-    const CACHE_KEY = 'anxer_landing_ads';
-    const CACHE_TTL = 'anxer_landing_ads_ttl';
-
-    let config = null;
-
-    try {
-      const ttl = localStorage.getItem(CACHE_TTL);
-      if (ttl && Date.now() < Number(ttl)) {
-        const cached = localStorage.getItem(CACHE_KEY);
-        if (cached) config = JSON.parse(cached);
-      }
-    } catch {}
-
-    if (!config) {
-      try {
-        const res = await fetch(ADS_CONFIG_URL, { cache: 'no-cache' });
-        if (!res.ok) throw new Error();
-        config = await res.json();
-        try {
-          const ttlMs = (config.refresh_hours || 24) * 60 * 60 * 1000;
-          localStorage.setItem(CACHE_KEY, JSON.stringify(config));
-          localStorage.setItem(CACHE_TTL, String(Date.now() + ttlMs));
-        } catch {}
-      } catch {
-        return; // Fail silently
-      }
-    }
-
-    if (!config || !config.ads) return;
-
-    function renderAds(sidebar, position) {
-      if (!sidebar) return;
-      const ads = config.ads.filter((a) => a.position === position && a.enabled);
-      if (ads.length === 0) return;
-
-      sidebar.innerHTML = ads
-        .map(
-          (ad) => `
-        <a href="${ad.click_url}" target="_blank" rel="noopener noreferrer"
-           title="${ad.alt_text}">
-          <img src="${ad.image_url}" alt="${ad.alt_text}" loading="lazy"
-               onerror="this.parentElement.style.display='none'" />
-        </a>
-        <span class="ad-label">ad</span>
-      `
-        )
-        .join('');
-    }
-
-    renderAds(leftSidebar, 'left');
-    renderAds(rightSidebar, 'right');
-  }
 
   // ── Mobile Nav ─────────────────────────────────────────────
   function initMobileNav() {
@@ -258,12 +197,46 @@
     });
   }
 
+  // ── GitHub Support Modal ──────────────────────────────────
+  function initGithubModal() {
+    const trigger = $('#github-modal-trigger');
+    const modal = $('#github-modal');
+    const closeBtn = $('#github-modal-close');
+    const supportBtn = $('#support-go-download');
+    const githubLink = modal ? modal.querySelector('a[href*="github.com"]') : null;
+
+    if (!trigger || !modal) return;
+
+    function open() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      open();
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    if (supportBtn) supportBtn.addEventListener('click', close);
+    if (githubLink) githubLink.addEventListener('click', close);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) close();
+    });
+  }
+
   // ── Init ───────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     initModal();
+    initGithubModal();
     initMobileNav();
     initScrollAnimations();
-    loadAds();
   });
 })();
