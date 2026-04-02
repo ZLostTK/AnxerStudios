@@ -20,6 +20,9 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/landing.css" />
+  <!-- Linkvertise Monetization -->
+  <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script>
+  <script>linkvertise(4749919, {whitelist: [""], blacklist: ["github.com"]});</script>
 </head>
 <body>
   <!-- Background effects -->
@@ -46,9 +49,9 @@
           <nav class="header-nav" id="desktop-nav">
             <a href="#features">Features</a>
             <a href="#screenshots">Vista Previa</a>
+            <a href="docs.html">Instalación</a>
             <a href="#download">Descargar</a>
             <a href="https://github.com/ZLostTK/AnxerStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="#download" class="header-cta" data-download>Descargar Gratis</a>
           </nav>
 
           <button class="mobile-menu-btn" aria-label="Menú" aria-expanded="false">
@@ -66,6 +69,7 @@
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
       <a href="#features">Features</a>
       <a href="#screenshots">Vista Previa</a>
+      <a href="docs.html">Instalación</a>
       <a href="#download">Descargar</a>
       <a href="https://github.com/ZLostTK/AnxerStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
@@ -96,7 +100,7 @@
             </p>
 
             <div class="hero-actions">
-              <button class="btn btn-primary" data-download aria-label="Descargar Anxer Studios gratis">
+              <button class="btn btn-primary" data-download="https://tpi.li/dCGDoma6S" aria-label="Descargar Anxer Studios para Windows (EXE)">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
                   <polyline points="7 10 12 15 17 10"/>
@@ -236,6 +240,99 @@
           </div>
         </section>
 
+        <!-- ═══ Release Notes ═════════════════════════════════ -->
+        <section class="release-notes" id="updates">
+          <div class="container">
+            <div class="release-card">
+              <div class="release-header">
+                <div class="release-version">
+                  <span class="version-badge">v2.1.0</span>
+                  <p class="release-date">Publicado: 02 Abr 2026</p>
+                </div>
+                <h2 class="release-title">¿Qué hay de nuevo?</h2>
+              </div>
+
+              <div class="release-body">
+                <div class="release-highlights">
+                  <div class="highlight-item">
+                    <div class="highlight-icon">✨</div>
+                    <div class="highlight-text">
+                      <h4>Publicidad Adaptativa</h4>
+                      <p>Los banners laterales ahora se expanden automáticamente para ocupar el espacio muerto en pantallas ultra-anchas, dando una interfaz más completa y profesional.</p>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="highlight-icon">✨</div>
+                    <div class="highlight-text">
+                      <h4>Barra de Episodios Inteligente</h4>
+                      <p>El listado de episodios ahora es deslizante — siempre verás el episodio actual y los 10 siguientes, sin el ruido de los anteriores.</p>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="highlight-icon">🔧</div>
+                    <div class="highlight-text">
+                      <h4>Centrado de Interfaz</h4>
+                      <p>El catálogo principal ahora se ancla siempre al centro exacto de la pantalla mientras los anuncios fluyen hacia los bordes.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="release-changelog">
+                  <h3>📋 Historial reciente</h3>
+                  
+                  <details class="changelog-item">
+                    <summary><strong>v2.0.2</strong> — 02/04/2026</summary>
+                    <div class="changelog-content">
+                      <p><strong>🔧 Correcciones:</strong> Codecs nativos en Linux: El reproductor fallaba al buscar conectores de audio del sistema (GStreamer). Solucionado empaquetando todas las librerías multimedia directamente dentro del .AppImage.</p>
+                    </div>
+                  </details>
+
+                  <details class="changelog-item">
+                    <summary><strong>v2.0.1</strong> — 02/04/2026</summary>
+                    <div class="changelog-content">
+                      <p><strong>✨ Añadido:</strong> Modo Servidor Invisible (--server) y Apagado Rápido (--stop).</p>
+                      <p><strong>🔧 Correcciones:</strong> Error de reproducción en Linux (conflicto entre AppImage y GStreamer).</p>
+                    </div>
+                  </details>
+
+                  <details class="changelog-item">
+                    <summary><strong>v2.0.0</strong> — 02/04/2026</summary>
+                    <div class="changelog-content">
+                      <p><strong>🔧 Mejoras:</strong> Organización interna, sincronización de componentes y detección del sistema mejorada.</p>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="release-specs">
+                  <h3>🖥️ Requisitos mínimos</h3>
+                  <div class="specs-grid">
+                    <div class="spec-entry"><span>Windows</span><strong>Win 10 x64+</strong></div>
+                    <div class="spec-entry"><span>Ubuntu/Debian</span><strong>20.04 LTS+</strong></div>
+                    <div class="spec-entry"><span>Fedora</span><strong>F38+</strong></div>
+                    <div class="spec-entry"><span>Arch Linux</span><strong>Rolling</strong></div>
+                    <div class="spec-entry"><span>RAM</span><strong>2 GB Min</strong></div>
+                  </div>
+                </div>
+
+                <div class="release-integrity">
+                  <h3>📦 Verificación de integridad (SHA-256)</h3>
+                  <div class="hash-box">
+                    <div class="hash-row"><span>.exe:</span> <code>bc68023b5bde07c2a0f3245a0239ef8491ba215147f21a398f528fc3cde74c4a</code></div>
+                    <div class="hash-row"><span>.msi:</span> <code>fe9f12c7437fafe5808cd590452b5a6d0a15a25644e2f87e1cb278a022ec2fa5</code></div>
+                    <div class="hash-row"><span>.deb:</span> <code>a3da5d4ef7773d4e9fa7e21f51432c3b6ee005b047e8024a06132f5a9e5267e7</code></div>
+                    <div class="hash-row"><span>.rpm:</span> <code>e926d0e97c44b9047ed225d6f98997132619927afbafd111688727c5c4aaa857</code></div>
+                    <div class="hash-row"><span>.AppImage:</span> <code>58b222a46d794f4dd0c21ac5a00360ae806824ede9cef43cfe0ae8691ddf7aed</code></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="release-disclaimer">
+                <p>AnxerStudios no aloja ni distribuye ningún contenido multimedia. Todo el contenido es provisto por terceros y es responsabilidad exclusiva de sus proveedores.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div class="separator" aria-hidden="true"></div>
 
         <!-- ═══ Download ═════════════════════════════════════ -->
@@ -257,15 +354,12 @@
                     </svg>
                   </div>
                   <h3 class="download-os-name">Linux</h3>
-                  <p class="download-formats">.AppImage / .deb</p>
-                  <button class="btn btn-primary" data-download aria-label="Descargar Anxer Studios para Linux">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                      <polyline points="7 10 12 15 17 10"/>
-                      <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                    Descargar
-                  </button>
+                  <p class="download-formats">Elige tu formato</p>
+                  <div class="download-options">
+                    <button class="btn btn-primary btn-sm" data-download="https://tpi.li/TP8uh2Z">.AppImage</button>
+                    <button class="btn btn-outline btn-sm" data-download="https://tpi.li/jT7tLSjunr0">.deb</button>
+                    <button class="btn btn-outline btn-sm" data-download="https://tpi.li/Y76uY07IQc7">.rpm</button>
+                  </div>
                 </div>
 
                 <!-- Windows -->
@@ -276,27 +370,18 @@
                     </svg>
                   </div>
                   <h3 class="download-os-name">Windows</h3>
-                  <p class="download-formats">.msi / .exe</p>
-                  <button class="btn btn-primary" data-download aria-label="Descargar Anxer Studios para Windows">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                      <polyline points="7 10 12 15 17 10"/>
-                      <line x1="12" y1="15" x2="12" y2="3"/>
-                    </svg>
-                    Descargar
-                  </button>
+                  <p class="download-formats">Elige tu formato</p>
+                  <div class="download-options">
+                    <button class="btn btn-primary btn-sm" data-download="https://tpi.li/dCGDoma6S">.exe (Setup)</button>
+                    <button class="btn btn-outline btn-sm" data-download="https://tpi.li/4VIrQgAKMp">.msi</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- PropellerAds slot (placeholder — activate when you have account) -->
-        <!-- <div class="container">
-          <div class="ad-slot" id="propeller-banner">
-            PropellerAds banner — replace this with your script tag
-          </div>
-        </div> -->
+
       </div>
 
       <!-- Right Ad Sidebar -->
@@ -345,12 +430,7 @@
         <div class="modal-progress-fill"></div>
       </div>
 
-      <!-- PropellerAds slot inside modal (placeholder) -->
-      <!-- Uncomment when you have PropellerAds account:
-      <div class="ad-slot" id="propeller-modal-ad">
-        PropellerAds — insert your script here
-      </div>
-      -->
+
 
       <!-- Download button (appears after countdown) -->
       <div class="modal-download-btn">
@@ -369,8 +449,6 @@
   <!-- Scripts -->
   <script src="js/landing.js"></script>
 
-  <!-- PropellerAds global script (placeholder — uncomment with your ID)
-  <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('your-propeller-domain','YOUR_ZONE_ID',document.createElement('script'))</script>
-  -->
+
 </body>
 </html>

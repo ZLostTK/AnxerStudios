@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalación — Anxer Studios | Guía de Usuario</title>
+  <meta name="description" content="Guía completa para instalar Anxer Studios en Windows y Linux. Requisitos, comandos y solución de problemas." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/landing.css" />
+  
+  <!-- Linkvertise Monetization -->
+  <script src="https://publisher.linkvertise.com/cdn/linkvertise.js"></script>
+  <script>linkvertise(4749919, {whitelist: [""], blacklist: ["github.com"]});</script>
+</head>
+<body class="docs-page">
+  <!-- Background effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-gradient-orb bg-gradient-orb--cyan" aria-hidden="true"></div>
+  <div class="bg-gradient-orb bg-gradient-orb--magenta" aria-hidden="true"></div>
+
+  <div class="page-wrapper">
+    <!-- ═══ Header ═══════════════════════════════════════════ -->
+    <header class="site-header" id="header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="index.html" class="header-logo" aria-label="Anxer Studios Home">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="currentColor" opacity="0.1"/>
+              <path d="M16 6L26 26H6L16 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M11 20H21" stroke="currentColor" stroke-width="2"/>
+              <circle cx="16" cy="14" r="2" fill="currentColor"/>
+            </svg>
+            <span class="header-logo-text">ANXER STUDIOS</span>
+          </a>
+
+          <nav class="header-nav">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#features">Features</a>
+            <a href="#install">Instalación</a>
+            <a href="#commands">Comandos</a>
+            <a href="https://github.com/ZLostTK/AnxerStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </nav>
+
+          <button class="mobile-menu-btn" aria-label="Menú" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- ═══ Title ═════════════════════════════════════════ -->
+      <section class="docs-hero hero">
+        <div class="container">
+          <span class="hero-tag">Guía Oficial</span>
+          <h1 class="hero-title">Guía de <span class="gradient-text">Instalación</span></h1>
+          <p class="hero-subtitle">Instala Anxer Studios en tu sistema preferido y comienza a disfrutar del mejor catálogo de streaming.</p>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- ═══ Index and Content ════════════════════════════ -->
+        <div class="docs-layout">
+          <!-- Sidebar Nav (Optional) -->
+          <aside class="docs-sidebar">
+            <nav class="docs-nav-links">
+              <a href="#windows">Windows (Setup/MSI)</a>
+              <a href="#linux-appimage">Linux (AppImage)</a>
+              <a href="#linux-pkg">Linux (DEB/RPM)</a>
+              <a href="#commands">Modos de Servidor</a>
+              <a href="#troubleshooting">Solución de Problemas</a>
+            </nav>
+          </aside>
+
+          <!-- Main Doc Content -->
+          <article class="docs-article">
+            
+            <section id="windows" class="doc-section">
+              <h2>Windows <span class="badge">Desktop</span></h2>
+              <p>Recomendado para usuarios de Windows 10 x64 o superior.</p>
+              <div class="step-list">
+                <p>1. Descarga el archivo <code>.exe</code> o <code>.msi</code> desde la <a href="index.html#download">página principal</a>.</p>
+                <p>2. Ejecuta el archivo descargado.</p>
+                <p>3. Si Windows SmartScreen aparece, selecciona "Más información" y después "Ejecutar".</p>
+                <p>4. Abre la app desde el escritorio.</p>
+              </div>
+            </section>
+
+            <div class="separator" aria-hidden="true"></div>
+
+            <section id="linux-appimage" class="doc-section">
+              <h2>Linux <span class="badge">AppImage</span></h2>
+              <p>El formato universal que funciona en casi cualquier distribución sin instalar nada.</p>
+              <div class="code-block-wrapper">
+                <p>1. Da permisos de ejecución:</p>
+                <div class="code-terminal">
+                  <code><span class="token-cmd">chmod</span> <span class="token-flag">+x</span> <span class="token-arg">AnxerStudios_X.X.X_x64.AppImage</span></code>
+                </div>
+                <p>2. Ejecuta directamente:</p>
+                <div class="code-terminal">
+                  <code><span class="token-cmd">./AnxerStudios_X.X.X_x64.AppImage</span></code>
+                </div>
+              </div>
+              <p class="note"><strong>Nota:</strong> Para una mejor experiencia, puedes usar herramientas como <em>AppImageLauncher</em> para integrar la app en tu menú de aplicaciones.</p>
+            </section>
+
+            <div class="separator" aria-hidden="true"></div>
+
+            <section id="linux-pkg" class="doc-section">
+              <h2>Ubuntu/Debian & Fedora</h2>
+              <p>Instala la aplicación de forma nativa en tu sistema.</p>
+              <div class="tabs">
+                <div class="tab">
+                  <strong>Debian / Ubuntu / Kali</strong>
+                  <div class="code-terminal">
+                    <code><span class="token-cmd">sudo</span> <span class="token-arg">dpkg</span> <span class="token-flag">-i</span> <span class="token-arg">AnxerStudios_X.X.X_amd64.deb</span></code>
+                  </div>
+                </div>
+                <div class="tab">
+                  <strong>Fedora / RedHat / RHEL</strong>
+                  <div class="code-terminal">
+                    <code><span class="token-cmd">sudo</span> <span class="token-arg">rpm</span> <span class="token-flag">-i</span> <span class="token-arg">AnxerStudios-X.X.X.x86_64.rpm</span></code>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="separator" aria-hidden="true"></div>
+
+            <section id="commands" class="doc-section">
+              <h2>Modos de Lanzamiento <span class="badge badge-magenta">Advanced</span></h2>
+              <p>AnxerStudios incluye funciones avanzadas accesibles mediante terminal (CLI).</p>
+              
+              <div class="feature-detail">
+                <h4>Modo Servidor Invisible</h4>
+                <div class="code-terminal">
+                  <code><span class="token-cmd">anxer-studios</span> <span class="token-flag">--server</span></code>
+                </div>
+                <p>Inicia el motor de streaming en segundo plano. Ideal para servidores o navegadores en <code>localhost:3000</code>.</p>
+              </div>
+
+              <div class="feature-detail">
+                <h4>Apagado Rápido</h4>
+                <div class="code-terminal">
+                  <code><span class="token-cmd">anxer-studios</span> <span class="token-flag">--stop</span></code>
+                </div>
+                <p>Cierra la aplicación y todas sus instancias de servidor activas de forma segura.</p>
+              </div>
+            </section>
+
+            <div class="separator" aria-hidden="true"></div>
+
+            <section id="troubleshooting" class="doc-section">
+              <h2>Solución de Problemas</h2>
+              <div class="accordion">
+                <details>
+                  <summary>¿Pantalla en blanco al abrir (Linux)?</summary>
+                  <p>Asegúrate de tener instaladas las librerías de WebKitGTK. En Ubuntu: <code>sudo apt install libwebkit2gtk-4.0-37</code>.</p>
+                </details>
+                <details>
+                  <summary>¿Error al reproducir audio/video?</summary>
+                  <p>Desde la v2.0.2 empaquetamos todos los codecs nativos. Asegúrate de estar usando la última versión (vX.X.X) para tener la mejor compatibilidad.</p>
+                </details>
+              </div>
+            </section>
+
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- ═══ Footer ═══════════════════════════════════════════ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>ANXER STUDIOS</span>
+          </div>
+          <p class="footer-copy">© 2026 Anxer Studios. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/landing.js"></script>
+  <script>
+    // Highlight active sidebar link on scroll
+    const sections = document.querySelectorAll('.doc-section[id]');
+    const navLinks = document.querySelectorAll('.docs-nav-links a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
