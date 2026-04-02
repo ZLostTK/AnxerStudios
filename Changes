@@ -1,5 +1,14 @@
 # Changes
 
+## 2.1.0 (02-04-2026)
+
+### Added
+- **Publicidad Adaptativa**: Ahora los banners laterales se expanden automáticamente para ocupar todo el "espacio muerto" en pantallas ultra-anchas, haciendo que la interfaz se vea más llena y profesional.
+- **Barra de Episodios Inteligente**: El listado de episodios ahora es deslizante. Siempre verás el episodio actual y los siguientes 10, ocultando los anteriores para que la navegación sea mucho más rápida en series largas.
+
+### Fixed
+- **Centrado de Interfaz**: Se ajustó el motor de diseño para que el catálogo principal viaje siempre al centro exacto, mientras los anuncios fluyen hacia los bordes de la pantalla.
+
 ## 2.0.2 (02-04-2026)
 
 ### Fixed
