@@ -69,13 +69,14 @@
 
   // ── Download Modal ─────────────────────────────────────────
   function initModal() {
-    const overlay = $('.modal-overlay');
-    const closeBtn = $('.modal-close');
-    const countdownNum = $('.countdown-number');
-    const progressFill = $('.modal-progress-fill');
-    const progressCircle = $('.countdown-progress');
-    const downloadBtn = $('.modal-download-btn');
+    const overlay = $('#download-modal');
     if (!overlay) return;
+
+    const closeBtn = overlay.querySelector('.modal-close');
+    const countdownNum = overlay.querySelector('.countdown-number');
+    const progressFill = overlay.querySelector('.modal-progress-fill');
+    const progressCircle = overlay.querySelector('.countdown-progress');
+    const downloadBtn = overlay.querySelector('.modal-download-btn');
 
     let countdownTimer;
     let pendingUrl = '';
