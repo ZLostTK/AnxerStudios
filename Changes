@@ -1,5 +1,19 @@
 # Changes
 
+## 2.3.0 (03-04-2026)
+
+### Fixed
+- **Modo Premium**: Se corrigió un error que impedía la reproducción de vídeos en el modo premium, metodo de reproducción sin publicidad externa de los proveedores de contenido.
+
+### Qué verás mejor
+
+- **Reproducción más estable:** Muchos vídeos que antes no cargaban o salían bloqueados ahora deberían verse bien, sobre todo en el **servidor premium**.
+- **Series y películas en la misma línea:** El reproductor trata de forma coherente películas y capítulos de series o anime.
+
+### Detalle breve
+
+- Ajustes internos para que el modo **premium** funcione correctamente, aunque este consume un poco más de recursos.
+
 ## 2.1.0 (02-04-2026)
 
 ### Added

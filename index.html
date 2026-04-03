@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Anxer Studios — Streaming Desktop App | Descarga Gratis</title>
   <meta name="description" content="Descarga Anxer Studios, tu aplicación de escritorio para streaming de películas, series y anime. Disponible para Linux y Windows." />
   <meta name="keywords" content="anxer studios, streaming, desktop app, películas, series, anime, linux, windows, descarga gratis" />
@@ -70,12 +70,12 @@
 
     <!-- Mobile Nav -->
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
-      <a href="#features">Features</a>
-      <a href="#screenshots">Vista Previa</a>
+      <a href="legal.html">Licencia</a>
       <a href="tutorial-ads.html">Ayuda Ads</a>
-      <a href="docs.html">Instalación</a>
+      <a href="#screenshots">Vista Previa</a>
+      <a href="#features">Features</a>
       <a href="#download">Descargar</a>
-      <a href="https://github.com/ZLostTK/AnxerStudios" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="docs.html">Instalación</a>
     </nav>
 
     <div class="main-content">
@@ -84,7 +84,7 @@
           <div class="container">
             <span class="hero-tag">
               <span class="dot" aria-hidden="true"></span>
-              Versión 2.1.0 disponible
+              Versión 2.3.0 disponible
             </span>
 
             <h1 class="hero-title">
@@ -244,8 +244,8 @@
             <div class="release-card">
               <div class="release-header">
                 <div class="release-version">
-                  <span class="version-badge">v2.1.0</span>
-                  <p class="release-date">Publicado: 02 Abr 2026</p>
+                  <span class="version-badge">v2.3.0</span>
+                  <p class="release-date">Publicado: 03 Abr 2026</p>
                 </div>
                 <h2 class="release-title">¿Qué hay de nuevo?</h2>
               </div>
@@ -253,43 +253,53 @@
               <div class="release-body">
                 <div class="release-highlights">
                   <div class="highlight-item">
-                    <div class="highlight-icon">✨</div>
-                    <div class="highlight-text">
-                      <h4>Publicidad Adaptativa</h4>
-                      <p>Los banners laterales ahora se expanden automáticamente para ocupar el espacio muerto en pantallas ultra-anchas, dando una interfaz más completa y profesional.</p>
-                    </div>
-                  </div>
-                  <div class="highlight-item">
-                    <div class="highlight-icon">✨</div>
-                    <div class="highlight-text">
-                      <h4>Barra de Episodios Inteligente</h4>
-                      <p>El listado de episodios ahora es deslizante — siempre verás el episodio actual y los 10 siguientes, sin el ruido de los anteriores.</p>
-                    </div>
-                  </div>
-                  <div class="highlight-item">
                     <div class="highlight-icon">🔧</div>
                     <div class="highlight-text">
-                      <h4>Centrado de Interfaz</h4>
-                      <p>El catálogo principal ahora se ancla siempre al centro exacto de la pantalla mientras los anuncios fluyen hacia los bordes.</p>
+                      <h4>Modo premium</h4>
+                      <p>Se corrigió un error que impedía reproducir vídeos en el modo premium: reproducción sin publicidad externa de los proveedores de contenido.</p>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="highlight-icon">▶️</div>
+                    <div class="highlight-text">
+                      <h4>Reproducción más estable</h4>
+                      <p>Muchos vídeos que antes no cargaban o quedaban bloqueados deberían verse bien, sobre todo en el <strong>servidor premium</strong>.</p>
+                    </div>
+                  </div>
+                  <div class="highlight-item">
+                    <div class="highlight-icon">🎬</div>
+                    <div class="highlight-text">
+                      <h4>Películas y series alineadas</h4>
+                      <p>El reproductor trata de forma coherente películas y capítulos de series o anime.</p>
                     </div>
                   </div>
                 </div>
 
+                <p class="release-note-muted">El modo <strong>premium</strong> puede consumir un poco más de recursos; es el trade-off de estas mejoras internas.</p>
+
                 <div class="release-changelog">
                   <h3>📋 Historial reciente</h3>
-                  
+
+                  <details class="changelog-item">
+                    <summary><strong>v2.1.0</strong> — 02/04/2026</summary>
+                    <div class="changelog-content">
+                      <p><strong>✨ Añadido:</strong> Publicidad adaptativa (banners laterales en pantallas ultra-anchas). Barra de episodios inteligente (listado deslizante: episodio actual y los 10 siguientes).</p>
+                      <p><strong>🔧 Correcciones:</strong> Centrado de interfaz: el catálogo principal al centro; anuncios hacia los bordes.</p>
+                    </div>
+                  </details>
+
                   <details class="changelog-item">
                     <summary><strong>v2.0.2</strong> — 02/04/2026</summary>
                     <div class="changelog-content">
-                      <p><strong>🔧 Correcciones:</strong> Codecs nativos en Linux: El reproductor fallaba al buscar conectores de audio del sistema (GStreamer). Solucionado empaquetando todas las librerías multimedia directamente dentro del .AppImage.</p>
+                      <p><strong>🔧 Correcciones:</strong> Codecs nativos en Linux: el reproductor fallaba al buscar conectores de audio del sistema (GStreamer). Solucionado empaquetando todas las librerías multimedia directamente dentro del .AppImage.</p>
                     </div>
                   </details>
 
                   <details class="changelog-item">
                     <summary><strong>v2.0.1</strong> — 02/04/2026</summary>
                     <div class="changelog-content">
-                      <p><strong>✨ Añadido:</strong> Modo Servidor Invisible (--server) y Apagado Rápido (--stop).</p>
-                      <p><strong>🔧 Correcciones:</strong> Error de reproducción en Linux (conflicto entre AppImage y GStreamer).</p>
+                      <p><strong>✨ Añadido:</strong> Modo servidor invisible (<code>--server</code>) y apagado rápido (<code>--stop</code>).</p>
+                      <p><strong>🔧 Correcciones:</strong> Error de reproducción en Linux (AppImage y GStreamer).</p>
                     </div>
                   </details>
 
@@ -309,17 +319,6 @@
                     <div class="spec-entry"><span>Fedora</span><strong>F38+</strong></div>
                     <div class="spec-entry"><span>Arch Linux</span><strong>Rolling</strong></div>
                     <div class="spec-entry"><span>RAM</span><strong>2 GB Min</strong></div>
-                  </div>
-                </div>
-
-                <div class="release-integrity">
-                  <h3>📦 Verificación de integridad (SHA-256)</h3>
-                  <div class="hash-box">
-                    <div class="hash-row"><span>.exe:</span> <code>bc68023b5bde07c2a0f3245a0239ef8491ba215147f21a398f528fc3cde74c4a</code></div>
-                    <div class="hash-row"><span>.msi:</span> <code>fe9f12c7437fafe5808cd590452b5a6d0a15a25644e2f87e1cb278a022ec2fa5</code></div>
-                    <div class="hash-row"><span>.deb:</span> <code>a3da5d4ef7773d4e9fa7e21f51432c3b6ee005b047e8024a06132f5a9e5267e7</code></div>
-                    <div class="hash-row"><span>.rpm:</span> <code>e926d0e97c44b9047ed225d6f98997132619927afbafd111688727c5c4aaa857</code></div>
-                    <div class="hash-row"><span>.AppImage:</span> <code>58b222a46d794f4dd0c21ac5a00360ae806824ede9cef43cfe0ae8691ddf7aed</code></div>
                   </div>
                 </div>
               </div>

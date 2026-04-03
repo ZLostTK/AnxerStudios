@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Ayuda Publicidad — Anxer Studios | Tutorial</title>
   <meta name="description" content="Guía paso a paso para saltar los enlaces de descarga monetizados (ShrinkEarn) de Anxer Studios." />
   
@@ -58,6 +58,15 @@
       </div>
     </header>
 
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+      <a href="legal.html">Licencia</a>
+      <a href="index.html#screenshots">Vista Previa</a>
+      <a href="index.html#features">Features</a>
+      <a href="tutorial-ads.html">Ayuda Ads</a>
+      <a href="index.html#download">Descargar</a>
+      <a href="docs.html">Instalación</a>
+    </nav>
+
     <main class="main-content">
       <section class="docs-hero">
         <div class="container">
@@ -77,32 +86,23 @@
               <div class="skip-step-number">01</div>
               <h3 class="skip-step-title">Click y Espera</h3>
               <p class="skip-step-desc">Tras hacer click en el enlace de descarga, se abrirá una página con un temporizador (normalmente 5 a 10 segundos). Espera a que llegue a cero.</p>
-              <div class="step-badge">⏳ Espera requerida</div>
+              <div class="step-badge">Espera requerida</div>
             </div>
             <div class="skip-step-card">
-              <div class="skip-step-number">02</div>
+              <div class="skip-step-mber">02</div>
               <h3 class="skip-step-title">Verificación</h3>
               <p class="skip-step-desc">Busca el botón azul que dice <strong>"Continuar"</strong> o <strong>"I'm not a robot"</strong>. Si al hacer click se abre una pestaña nueva, <strong>ciérrala de inmediato</strong>.</p>
-              <div class="step-badge">🤖 Verificación Humana</div>
+              <div class="step-badge">Captcha</div>
             </div>
             <div class="skip-step-card">
               <div class="skip-step-number">03</div>
               <h3 class="skip-step-title">Get Link</h3>
               <p class="skip-step-desc">Finalmente, aparecerá un botón verde que dice <strong>"Get Link"</strong> o <strong>"Ir al enlace"</strong>. Haz click hasta que te lleve al enlace final de descarga.</p>
-              <div class="step-badge">🚀 Enlace Final</div>
-            </div>
-            <div class="skip-step-card">
-              <div class="skip-step-number">04</div>
-              <h3 class="skip-step-title">Verificación SHA256</h3>
-              <p class="skip-step-desc">En la sección de descargas de la web oficial, verás una lista de códigos largos (Hash SHA-256). Compara el código de tu archivo descargado con el de la web para confirmar su integridad.</p>
-              <div class="terminal-mini" style="font-size: 0.75rem; background: rgba(0,0,0,0.3); border-radius: 4px; border: 1px solid rgba(255,255,255,0.05);">
-                <code style="color: var(--cyan);">certutil -hashfile [archivo] SHA256</code> (Win)<br>
-                <code style="color: var(--cyan);">sha256sum [archivo]</code> (Linux)
-              </div>
+              <div class="step-badge">Enlace Final</div>
             </div>
           </div>
 
-          <div class="alert-group" ">
+          <div class="alert-group">
             <div class="alert alert-danger">
               <div class="alert-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -139,6 +139,7 @@
               </div>
             </div>
           </div>
+        </div>
 
         <div class="separator" aria-hidden="true"></div>
       </div>
