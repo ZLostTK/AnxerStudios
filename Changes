@@ -1,5 +1,16 @@
 # Changes
 
+## 2.3.2 (05-08-2026)
+
+### Fixed
+- **Series en modo premium reproducían siempre el episodio 1x1:** Ahora se respeta el capítulo y la temporada seleccionados al pedir el stream premium (antes, cualquier capítulo abría el 1x1).
+
+## 2.3.1 (04-08-2026)
+
+### Fixed
+- **El botón ⭐ PREMIUM vuelve a funcionar:** La app "saluda" a la web de vídeo de la misma forma que un navegador normal y consigue el vídeo directo, sin anuncios y sin errores de conexión.
+- **Fallback automático:** Si el servidor premium está caído, la app pasa al servidor normal para que la película o el capítulo se vea igualmente.
+
 ## 2.3.0 (03-04-2026)
 
 ### Fixed
